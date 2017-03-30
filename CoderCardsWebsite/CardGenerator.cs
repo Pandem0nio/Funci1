@@ -81,7 +81,7 @@ namespace CoderCardsLibrary
             var client = new HttpClient();
 
             var content = new StreamContent(new MemoryStream(image));
-            var key = Environment.GetEnvironmentVariable(EMOTION_API_KEY_NAME);
+            var key = EMOTION_API_KEY_NAME;
 
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", key);
             content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
