@@ -18,7 +18,7 @@
           <StartExternalURL>
           </StartExternalURL>
           <StartCmdLineArguments>host start</StartCmdLineArguments>
-          <StartWorkingDirectory>C:\development\CoderCardsV2-master\CoderCardsV2-master\CoderCardsWebsite</StartWorkingDirectory>
+          <StartWorkingDirectory>C:\Users\jetiba\Documents\GitHub\Funci1\CoderCardsWebsite</StartWorkingDirectory>
           <EnableENC>True</EnableENC>
           <AlwaysStartWebServerOnDebug>True</AlwaysStartWebServerOnDebug>
         </WebProjectProperties>

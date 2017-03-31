@@ -1,5 +1,5 @@
 ﻿{
-  "scriptFile":"..\\bin\\CoderCardsWebsite.dll",
+  "scriptFile": "C:\\Users\\jetiba\\Documents\\GitHub\\Funci1\\CoderCardsWebsite\\bin\\CoderCardsWebsite.dll",
   "entryPoint": "CoderCardsLibrary.CardGenerator.Run",
   "bindings": [
     {

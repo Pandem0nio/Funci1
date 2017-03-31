@@ -97,6 +97,9 @@ namespace CoderCardsLibrary
 
         static string GetFullImagePath(string filename)
         {
+            if (Environment.GetEnvironmentVariable("HOME") == null) Environment.SetEnvironmentVariable("HOME", ".");
+            if (Environment.GetEnvironmentVariable("SITE_PATH") == null) Environment.SetEnvironmentVariable("SITE_PATH", ".");
+
             var path = Path.Combine(
                 Environment.GetEnvironmentVariable("HOME"),
                 Environment.GetEnvironmentVariable("SITE_PATH"),
