@@ -18,9 +18,9 @@ namespace CoderCardsLibrary
         private const string EMOTION_API_KEY_NAME = "b2e684f0511443bba8d715d08492b66e";
         private const string ASSETS_FOLDER        = "assets";
 
-        //public static async Task Run(byte[] image, string filename, Stream outputBlob, TraceWriter log)
-        public static async Task Run(string image, string filename, Stream outputBlob, TraceWriter log)
+        public static async Task Run(byte[] image, string filename, Stream outputBlob, TraceWriter log)
         {
+            log.Info("Immagine: " + image.Length);
             string result = await CallEmotionAPI(image);
             log.Info(result);
 
@@ -41,19 +41,9 @@ namespace CoderCardsLibrary
             var card = GetCardImageAndScores(faceData.Scores, out score);
 
             var personInfo = GetNameAndTitle(filename); // extract name and title from filename
-            //JT
-            byte[] img = GetImageAsByteArray(image);
-            MergeCardImage(card, img, personInfo, score);
+            MergeCardImage(card, image, personInfo, score);
 
             SaveAsJpeg(card, outputBlob);
-        }
-
-        //JT
-        static byte[] GetImageAsByteArray(string image)
-        {
-            FileStream fileStream = new FileStream(image, FileMode.Open, FileAccess.Read);
-            BinaryReader binaryReader = new BinaryReader(fileStream);
-            return binaryReader.ReadBytes((int)fileStream.Length);
         }
 
         public static Tuple<string, string> GetNameAndTitle(string filename)
@@ -87,16 +77,11 @@ namespace CoderCardsLibrary
             return Image.FromFile(GetFullImagePath(cardBack));
         }
 
-        //static async Task<string> CallEmotionAPI(byte[] image)
-        static async Task<string> CallEmotionAPI(string image)
+        static async Task<string> CallEmotionAPI(byte[] image)
         {
             var client = new HttpClient();
 
-            //var content = new StreamContent(new MemoryStream(image));
-            byte[] byteData = GetImageAsByteArray(image);
-            var content = new ByteArrayContent(byteData);
-            
-
+            var content = new StreamContent(new MemoryStream(image));
             var key = EMOTION_API_KEY_NAME;
 
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", key);
@@ -104,8 +89,7 @@ namespace CoderCardsLibrary
             var httpResponse = await client.PostAsync(EMOTION_API_URI, content);
 
             if (httpResponse.StatusCode == HttpStatusCode.OK) {
-                //JT delete await
-                return httpResponse.Content.ReadAsStringAsync().Result;
+                return await httpResponse.Content.ReadAsStringAsync();
             }
 
             return null;
