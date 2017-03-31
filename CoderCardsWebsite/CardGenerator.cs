@@ -20,7 +20,7 @@ namespace CoderCardsLibrary
 
         public static async Task Run(byte[] image, string filename, Stream outputBlob, TraceWriter log)
         {
-            log.Info("Questa è la lunghezza dell'immagine: " + image.Length);
+            log.Info("Lunghezza dell'immagine: " + image.Length);
             string result = await CallEmotionAPI(image);
             log.Info(result);
 

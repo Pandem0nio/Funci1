@@ -149,6 +149,5 @@ C:\Users\jetiba\Documents\GitHub\Funci1\CoderCardsWebsite\bin\ko\System.Spatial.
 C:\Users\jetiba\Documents\GitHub\Funci1\CoderCardsWebsite\bin\ru\System.Spatial.resources.dll
 C:\Users\jetiba\Documents\GitHub\Funci1\CoderCardsWebsite\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\jetiba\Documents\GitHub\Funci1\CoderCardsWebsite\bin\zh-Hant\System.Spatial.resources.dll
-C:\Users\jetiba\Documents\GitHub\Funci1\CoderCardsWebsite\obj\Debug\CoderCardsWebsite.csprojResolveAssemblyReference.cache
 C:\Users\jetiba\Documents\GitHub\Funci1\CoderCardsWebsite\obj\Debug\CoderCardsWebsite.dll
 C:\Users\jetiba\Documents\GitHub\Funci1\CoderCardsWebsite\obj\Debug\CoderCardsWebsite.pdb
