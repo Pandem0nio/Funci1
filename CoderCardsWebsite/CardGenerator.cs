@@ -97,12 +97,11 @@ namespace CoderCardsLibrary
 
         static string GetFullImagePath(string filename)
         {
-            var path = "./assets/" + filename;
-                //Path.Combine(
-                //Environment.GetEnvironmentVariable("HOME"), 
-                //Environment.GetEnvironmentVariable("SITE_PATH"), 
-                //ASSETS_FOLDER,
-                //filename);
+            var path = Path.Combine(
+                Environment.GetEnvironmentVariable("HOME"),
+                Environment.GetEnvironmentVariable("SITE_PATH"),
+                ASSETS_FOLDER,
+                filename);
 
             return Path.GetFullPath(path);
         }
