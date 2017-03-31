@@ -74,3 +74,4 @@ C:\development\CoderCardsV2-master\CoderCardsV2-master\CoderCardsWebsite\bin\zh-
 C:\development\CoderCardsV2-master\CoderCardsV2-master\CoderCardsWebsite\bin\zh-Hant\System.Spatial.resources.dll
 C:\development\CoderCardsV2-master\CoderCardsV2-master\CoderCardsWebsite\obj\Debug\CoderCardsWebsite.dll
 C:\development\CoderCardsV2-master\CoderCardsV2-master\CoderCardsWebsite\obj\Debug\CoderCardsWebsite.pdb
+C:\development\CoderCardsV2-master\CoderCardsV2-master\CoderCardsWebsite\obj\Debug\CoderCardsWebsite.csprojResolveAssemblyReference.cache

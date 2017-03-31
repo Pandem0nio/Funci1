@@ -1,12 +1,12 @@
 ﻿{
-  "scriptFile": "..\\bin\\CoderCardsWebsite.dll",
+  "scriptFile":"..\\bin\\CoderCardsWebsite.dll",
   "entryPoint": "CoderCardsLibrary.CardGenerator.Run",
   "bindings": [
     {
       "name": "image",
       "type": "blobTrigger",
       "direction": "in",
-      "path": "input/{filename}.jpg",
+      "path": "input-img/{filename}.jpg",
       "connection": "AzureWebJobsStorage"
     },
     {
